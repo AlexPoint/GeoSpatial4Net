@@ -2,7 +2,7 @@ using NUnit.Framework;
 
 namespace GeoSpatial4Net.Tests
 {
-    public class Tests
+    public class DistanceConversionTest
     {
         [SetUp]
         public void Setup()

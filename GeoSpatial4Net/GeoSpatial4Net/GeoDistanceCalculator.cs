@@ -6,7 +6,7 @@ namespace GeoSpatial4Net
 {
     public class GeoDistanceCalculator
     {
-        private const int earthRadiusInMeters = 6371000;
+        private const int earthRadiusInMeters = 6372800;
 
         public GeoDistanceCalculator() { }
 
