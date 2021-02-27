@@ -14,6 +14,8 @@ namespace GeoSpatial4Net
             { DistanceUnit.Feet, 3.28084 }
         };
 
+        public DistanceConverter() { }
+
         /// <summary>
         /// Converts a distance from a given distance unit to another unit.
         /// </summary>
