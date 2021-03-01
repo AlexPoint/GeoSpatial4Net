@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+	  <PackageId>GeoSpatial4Net</PackageId>
+	  <Version>1.0.0</Version>
+	  <Authors>AlexPoint</Authors>
+	  <ProjectUrl>https://github.com/AlexPoint/GeoSpatial4Net</ProjectUrl>
+	  <License>AGPL-3.0-only</License>
+  </PropertyGroup>
+
+</Project>

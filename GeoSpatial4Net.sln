@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoSpatial4Net", "GeoSpatial4Net\GeoSpatial4Net.csproj", "{0FF11344-749E-4DF7-89D3-A6D1EE0BAF12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeoSpatial4Net.Tests", "GeoSpatial4Net.Tests\GeoSpatial4Net.Tests.csproj", "{4730F4D7-5B87-4F9C-8A31-691A98AD20F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoSpatial4Net.Tests", "GeoSpatial4Net.Tests\GeoSpatial4Net.Tests.csproj", "{4730F4D7-5B87-4F9C-8A31-691A98AD20F7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoSpatial4Net.Core", "GeoSpatial4Net.Core\GeoSpatial4Net.Core.csproj", "{5BBC729E-FA59-4BD7-8A26-235BBBDE8413}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0FF11344-749E-4DF7-89D3-A6D1EE0BAF12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0FF11344-749E-4DF7-89D3-A6D1EE0BAF12}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0FF11344-749E-4DF7-89D3-A6D1EE0BAF12}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0FF11344-749E-4DF7-89D3-A6D1EE0BAF12}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4730F4D7-5B87-4F9C-8A31-691A98AD20F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4730F4D7-5B87-4F9C-8A31-691A98AD20F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4730F4D7-5B87-4F9C-8A31-691A98AD20F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4730F4D7-5B87-4F9C-8A31-691A98AD20F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BBC729E-FA59-4BD7-8A26-235BBBDE8413}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BBC729E-FA59-4BD7-8A26-235BBBDE8413}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BBC729E-FA59-4BD7-8A26-235BBBDE8413}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BBC729E-FA59-4BD7-8A26-235BBBDE8413}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GeoSpatial4Net\GeoSpatial4Net.csproj" />
+    <ProjectReference Include="..\GeoSpatial4Net.Core\GeoSpatial4Net.Core.csproj" />
   </ItemGroup>
 
 </Project>
