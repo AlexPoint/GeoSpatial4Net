@@ -10,6 +10,15 @@ namespace GeoSpatial4Net
 
         public GeoDistanceCalculator() { }
 
+
+        public double HaversineDistance(double latitude1, double longitude1, double latitude2, double longitude2)
+        {
+            var coord1 = new Coordinate(latitude1, longitude1);
+            var coord2 = new Coordinate(latitude2, longitude2);
+
+            return HaversineDistance(coord1, coord2);
+        }
+
         /// <summary>
         /// Computes the distance, in meters, between two coordinates using the Haversine method.
         /// </summary>
