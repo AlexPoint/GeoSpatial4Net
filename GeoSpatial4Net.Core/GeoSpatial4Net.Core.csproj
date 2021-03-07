@@ -3,13 +3,14 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
 	  <PackageId>GeoSpatial4Net</PackageId>
-	  <Version>1.0.1</Version>
+	  <Version>1.0.2</Version>
 	  <Authors>AlexPoint</Authors>
 	  <Description>A C# class library for .NET Core with basic geospatial operations, such as distance calculation or conversion.</Description>
 	  <ProjectUrl>https://github.com/AlexPoint/GeoSpatial4Net</ProjectUrl>
 	  <License>AGPL-3.0-only</License>
 	  <ReleaseNotes>Add method the compute distance between two latitude/longitude values.</ReleaseNotes>
 	  <PackageLicenseExpression>AGPL-3.0-only</PackageLicenseExpression>
+	  <PackageReleaseNotes>Add method to compute equirectangular projection distance</PackageReleaseNotes>
   </PropertyGroup>
 
 </Project>
