@@ -4,7 +4,7 @@
 Feel free to reach out if operations are missing or better, do a pull request!
 
 ## Install
-This library is available on nuget.
+This library is available on [nuget](https://www.nuget.org/packages/GeoSpatial4Net/).
 To install it via the package manager:
 `PM> Install-Package GeoSpatial4Net`
 
