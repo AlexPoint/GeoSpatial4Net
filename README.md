@@ -26,10 +26,20 @@ var distCalc = new GeoDistanceCalculator();
 var computedDistance2 = distCalc.HaversineDistance(36.12, -86.67, 33.94, -118.4);
 ```
 
+By default, the GeoDistancecCalculator return distances in meters,the base unit of length in the International System of Units. If you need distances in other units, specify the unit in the constructor:
+```cs
+var distCalc = new GeoDistanceCalculator(DistanceUnit.Mile);
+var computedDistanceInMiles = distCalc.HaversineDistance(36.12, -86.67, 33.94, -118.4);
+```
+The supported distance units are:
+* meter (default)
+* kilometer
+* mile
+* feet
+
 ### Distance conversion
 
-All distances are returned by default in meters, the base unit of length in the International System of Units.
-You can, however, convert those distances in other units:
+If needed, you can convert directly distances from one unit to another:
 ```cs
 var distanceConverter = new DistanceConverter();
 // converts 1500 meters in miles
