@@ -89,6 +89,19 @@ namespace GeoSpatial4Net.Tests
         }
 
         [Test]
+        public void SLCVsHaversineDistanceTest()
+        {
+            // The error between the two methods should be minimal for coordinate relatively close
+            var coord1 = new Coordinate(36.12, -86.67);
+            var coord2 = new Coordinate(36.94, -86.4);
+            var distCalc = new GeoDistanceCalculator();
+            var expectedDistanceM = distCalc.HaversineDistance(coord1, coord2);
+            var computedDistance = distCalc.SLCDistance(coord1, coord2);
+
+            Assert.AreEqual(Math.Floor(expectedDistanceM), Math.Floor(computedDistance));
+        }
+
+        [Test]
         public void OtherUnitDistanceTest()
         {
             var distanceConverter = new DistanceConverter();

@@ -49,6 +49,24 @@ namespace GeoSpatial4Net
             return EarthRadius * h2;
         }
 
+
+        /// <summary>
+        /// Computes the distance between two coordinates, using the spherical law of consines approximation.
+        /// </summary>
+        /// <returns>The estimated distance, in the unit specified in the GeoDistanceCalculator constructor</returns>
+        public double SLCDistance(Coordinate position1, Coordinate position2)
+        {
+            var lng = ToRadians(position2.Longitude - position1.Longitude);
+            var lat1 = ToRadians(position1.Latitude);
+            var lat2 = ToRadians(position2.Latitude);
+
+            var centralAngle = Math.Acos(Math.Sin(lat1) * Math.Sin(lat2) +
+                        Math.Cos(lat1) * Math.Cos(lat2) * Math.Cos(lng));
+
+            // great-circle (orthodromic) distance on Earth between 2 points    
+            return EarthRadius * centralAngle; 
+        }
+
         /// <summary>
         /// Computes the distance between two coordinates, using the equirectangular approximation.
         /// </summary>
