@@ -6,7 +6,8 @@ namespace GeoSpatial4Net
 {
     public class GeoDistanceCalculator
     {
-        private const int earthRadiusInMeters = 6372800;
+        // The mean earth radius (the earth begin a flattened sphere, the equatorial and polar radii are not equal) gives a better accuracy for the distance computation methods below
+        private const int earthRadiusInMeters = 6371009;
 
         public DistanceUnit Unit { get; private set; }
 
@@ -49,6 +50,18 @@ namespace GeoSpatial4Net
             return EarthRadius * h2;
         }
 
+
+        /// <summary>
+        /// Computes the distance between two coordinates, using the spherical law of consines approximation.
+        /// </summary>
+        /// <returns>The estimated distance, in the unit specified in the GeoDistanceCalculator constructor</returns>
+        public double SLCDistance(double latitude1, double longitude1, double latitude2, double longitude2)
+        {
+            var coord1 = new Coordinate(latitude1, longitude1);
+            var coord2 = new Coordinate(latitude2, longitude2);
+
+            return SLCDistance(coord1, coord2);
+        }
 
         /// <summary>
         /// Computes the distance between two coordinates, using the spherical law of consines approximation.

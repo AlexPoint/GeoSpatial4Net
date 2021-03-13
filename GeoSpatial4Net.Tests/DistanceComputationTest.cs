@@ -16,7 +16,7 @@ namespace GeoSpatial4Net.Tests
             var coord1 = new Coordinate(36.12, -86.67);
             var coord2 = new Coordinate(33.94, -118.4);
             var distCalc = new GeoDistanceCalculator();
-            var expectedDistanceM = 2887259.95;
+            var expectedDistanceM = 2886448.0;
             var computedDistance = distCalc.HaversineDistance(coord1, coord2);
 
             Assert.AreEqual(Math.Floor(expectedDistanceM), Math.Floor(computedDistance));
@@ -47,7 +47,7 @@ namespace GeoSpatial4Net.Tests
             var coord1 = new Coordinate(36.12, 273.33);
             var coord2 = new Coordinate(33.94, -118.4);
             var distCalc = new GeoDistanceCalculator();
-            var expectedDistanceM = 2887259.95;
+            var expectedDistanceM = 2886448.0;
             var computedDistance = distCalc.HaversineDistance(coord1, coord2);
 
             Assert.AreEqual(Math.Floor(expectedDistanceM), Math.Floor(computedDistance));
@@ -66,7 +66,7 @@ namespace GeoSpatial4Net.Tests
             var coord1 = new Coordinate(36.12, -86.67);
             var coord2 = new Coordinate(33.94, -118.4);
             var distCalc = new GeoDistanceCalculator();
-            var expectedDistanceM = 2900055.0;
+            var expectedDistanceM = 2899240.0;
             var computedDistance = distCalc.EquirectangularProjectionDistance(coord1, coord2);
 
             Assert.AreEqual(Math.Floor(expectedDistanceM), Math.Floor(computedDistance));
