@@ -8,9 +8,24 @@ namespace GeoSpatial4Net
     {
         private const int earthRadiusInMeters = 6372800;
 
-        public GeoDistanceCalculator() { }
+        public DistanceUnit Unit { get; private set; }
 
+        private double EarthRadius
+        {
+            get
+            {
+                return new DistanceConverter().ConvertDistance(earthRadiusInMeters, DistanceUnit.Meter, Unit);
+            }
+        }
 
+        public GeoDistanceCalculator(DistanceUnit unit = DistanceUnit.Meter) {
+            Unit = unit;
+        }
+
+        /// <summary>
+        /// Computes the distance between two sets of latitude/longitude, using the Haversine approximation.
+        /// </summary>
+        /// <returns>The estimated distance, in the unit specified in the GeoDistanceCalculator constructor</returns>
         public double HaversineDistance(double latitude1, double longitude1, double latitude2, double longitude2)
         {
             var coord1 = new Coordinate(latitude1, longitude1);
@@ -20,8 +35,9 @@ namespace GeoSpatial4Net
         }
 
         /// <summary>
-        /// Computes the distance, in meters, between two coordinates using the Haversine method.
+        /// Computes the distance between two coordinates, using the Haversine approximation.
         /// </summary>
+        /// <returns>The estimated distance, in the unit specified in the GeoDistanceCalculator constructor</returns>
         public double HaversineDistance(Coordinate position1, Coordinate position2)
         {
             var lat = ToRadians(position2.Latitude - position1.Latitude);
@@ -30,16 +46,24 @@ namespace GeoSpatial4Net
                           Math.Cos(ToRadians(position1.Latitude)) * Math.Cos(ToRadians(position2.Latitude)) *
                           Math.Sin(lng / 2) * Math.Sin(lng / 2);
             var h2 = 2 * Math.Asin(Math.Min(1, Math.Sqrt(h1)));
-            return earthRadiusInMeters * h2;
+            return EarthRadius * h2;
         }
 
+        /// <summary>
+        /// Computes the distance between two coordinates, using the equirectangular approximation.
+        /// </summary>
+        /// <returns>The estimated distance, in the unit specified in the GeoDistanceCalculator constructor</returns>
         public double EquirectangularProjectionDistance(Coordinate position1, Coordinate position2)
         {
             var p1 = ToRadians(position2.Longitude - position1.Longitude) * Math.Cos(0.5 * ToRadians(position2.Latitude + position1.Latitude)); //convert lat/lon to radians
             var p2 = ToRadians(position2.Latitude - position1.Latitude);
-            return earthRadiusInMeters * Math.Sqrt(p1 * p1 + p2 * p2);
+            return EarthRadius * Math.Sqrt(p1 * p1 + p2 * p2);
         }
 
+        /// <summary>
+        /// Computes the distance between two sets of latitude/longitude, using the equirectangular approximation.
+        /// </summary>
+        /// <returns>The estimated distance, in the unit specified in the GeoDistanceCalculator constructor</returns>
         public double EquirectangularProjectionDistance(double latitude1, double longitude1, double latitude2, double longitude2)
         {
             var coord1 = new Coordinate(latitude1, longitude1);
