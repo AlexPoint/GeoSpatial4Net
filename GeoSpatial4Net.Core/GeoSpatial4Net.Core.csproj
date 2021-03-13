@@ -11,6 +11,8 @@
 	  <ReleaseNotes>Add method the compute distance between two latitude/longitude values.</ReleaseNotes>
 	  <PackageLicenseExpression>AGPL-3.0-only</PackageLicenseExpression>
 	  <PackageReleaseNotes>Add method to compute equirectangular projection distance</PackageReleaseNotes>
+	  <PackageProjectUrl>https://github.com/AlexPoint/GeoSpatial4Net</PackageProjectUrl>
+	  <RepositoryUrl>https://github.com/AlexPoint/GeoSpatial4Net</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
