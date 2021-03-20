@@ -102,6 +102,21 @@ namespace GeoSpatial4Net.Tests
         }
 
         [Test]
+        public void VicentiVsHaversineDistanceTest()
+        {
+            // The error between the two methods should be minimal for coordinate relatively close
+            var coord1 = new Coordinate(36.12, -86.67);
+            var coord2 = new Coordinate(36.94, -86.4);
+            var distCalc = new GeoDistanceCalculator(DistanceUnit.Meter);
+            var expectedDistanceM = distCalc.HaversineDistance(coord1, coord2);
+            var computedDistance = distCalc.VincentiDistance(coord1, coord2);
+
+            // Distances differ slightly between the two methods ; we make sure the difference between the two computed distances is less than 1%
+            var delta = Math.Abs(expectedDistanceM - computedDistance) / computedDistance;
+            Assert.LessOrEqual(delta, 0.01);
+        }
+
+        [Test]
         public void OtherUnitDistanceTest()
         {
             var distanceConverter = new DistanceConverter();
