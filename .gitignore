@@ -349,3 +349,4 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 GeoSpatial4Net.Performance/Output/results.csv
+GeoSpatial4Net.Core/nuget_push_cmd.txt
