@@ -193,12 +193,12 @@ namespace GeoSpatial4Net
         /// Computes the distance between two sets of latitude/longitude, using the Vincenti formula.
         /// </summary>
         /// <returns>The estimated distance, in the unit specified in the GeoDistanceCalculator constructor</returns>
-        public double VincentiDistance(double latitude1, double longitude1, double latitude2, double longitude2)
+        public double VincentiDistance(double latitude1, double longitude1, double latitude2, double longitude2, double precision = 1e-12, int maxIterations = 100)
         {
             var coord1 = new Coordinate(latitude1, longitude1);
             var coord2 = new Coordinate(latitude2, longitude2);
 
-            return VincentiDistance(coord1, coord2);
+            return VincentiDistance(coord1, coord2, precision, maxIterations);
         }
 
         private static double ToRadians(double val)
