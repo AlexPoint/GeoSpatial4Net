@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeoSpatial4Net.Tests", "GeoSpatial4Net.Tests\GeoSpatial4Net.Tests.csproj", "{4730F4D7-5B87-4F9C-8A31-691A98AD20F7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeoSpatial4Net.Core", "GeoSpatial4Net.Core\GeoSpatial4Net.Core.csproj", "{5BBC729E-FA59-4BD7-8A26-235BBBDE8413}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeoSpatial4Net.Performance", "GeoSpatial4Net.Performance\GeoSpatial4Net.Performance.csproj", "{F96130ED-E394-4D96-912E-50E84AFF0860}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoSpatial4Net.Performance", "GeoSpatial4Net.Performance\GeoSpatial4Net.Performance.csproj", "{F96130ED-E394-4D96-912E-50E84AFF0860}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoSpatial4Net.Core", "GeoSpatial4Net.Core\GeoSpatial4Net.Core.csproj", "{0FE84BA5-1CCE-405D-88C5-72FAAB9AAC2D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +19,14 @@ Global
 		{4730F4D7-5B87-4F9C-8A31-691A98AD20F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4730F4D7-5B87-4F9C-8A31-691A98AD20F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4730F4D7-5B87-4F9C-8A31-691A98AD20F7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5BBC729E-FA59-4BD7-8A26-235BBBDE8413}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5BBC729E-FA59-4BD7-8A26-235BBBDE8413}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5BBC729E-FA59-4BD7-8A26-235BBBDE8413}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5BBC729E-FA59-4BD7-8A26-235BBBDE8413}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F96130ED-E394-4D96-912E-50E84AFF0860}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F96130ED-E394-4D96-912E-50E84AFF0860}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F96130ED-E394-4D96-912E-50E84AFF0860}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F96130ED-E394-4D96-912E-50E84AFF0860}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FE84BA5-1CCE-405D-88C5-72FAAB9AAC2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FE84BA5-1CCE-405D-88C5-72FAAB9AAC2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FE84BA5-1CCE-405D-88C5-72FAAB9AAC2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FE84BA5-1CCE-405D-88C5-72FAAB9AAC2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
